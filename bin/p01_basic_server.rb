@@ -5,6 +5,7 @@ app = Proc.new do |env|
   res = Rack::Response.new
   res['Content-Type'] = 'text/html'
   res.write("#{env["REQUEST_PATH"]}")
+  # res.write("#{req.params[:controller]}")
   res.finish
 end
 
